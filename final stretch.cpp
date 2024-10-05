@@ -4,6 +4,7 @@
 #include <ctype.h>
 #include <windows.h>
 #include <Time.h>
+#include <conio.h>
 
 /*
 ok cong viec moi:
@@ -21,9 +22,7 @@ void gotoxy(int x,int y)
 	hConsoleOutput = GetStdHandle
 
 (STD_OUTPUT_HANDLE);    
-	SetConsoleCursorPosition(hConsoleOutput , 
-
-Cursor_an_Pos);
+	SetConsoleCursorPosition(hConsoleOutput , Cursor_an_Pos);
 }
 
 
@@ -39,6 +38,9 @@ void gioiThieu(){
 		Sleep(100);
 		c = fgetc(ok);
 		printf("%c", c);
+		if(kbhit()){
+			getch(); system("cls"); return;	
+		} 
 	}
 	fclose(ok);
 	getchar();
@@ -99,13 +101,13 @@ void game(){
 		printf("\nMoi chon do kho: "); scanf("%d", &luaChon); getchar();
 		int attemp = 0;
 		if(luaChon == 1){
-			printf("\nBan co tong cong 5 luot de doan tu\n"); attemp = 5; Sleep(1500); system("cls");	
+			attemp = 5; printf("\nBan co tong cong %d luot de doan tu\n", attemp); Sleep(1500); system("cls");	
 		}
 		else if(luaChon == 2){
-			printf("\nBan co tong cong la 3 luot de doan tu\n"); attemp = 3; Sleep(1500); system("cls");
+			attemp = 3; printf("\nBan co tong cong la %d luot de doan tu\n", attemp); Sleep(1500); system("cls");
 		}
 		else if(luaChon == 3){
-			printf("\nBan chi co 1 luot de doan tu!!!\n"); attemp = 1; Sleep(1500); system("cls");
+			attemp = 1; printf("\nBan chi co %d luot de doan tu!!!\n", attemp); Sleep(1500); system("cls");
 		}
 		else{
 			printf("\nChon cho dung che do di thang ml\n"); Sleep(1500); system("cls");
