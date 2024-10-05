@@ -101,13 +101,13 @@ void game(){
 		printf("\nMoi chon do kho: "); scanf("%d", &luaChon); getchar();
 		int attemp = 0;
 		if(luaChon == 1){
-			attemp = 5; printf("\nBan co tong cong %d luot de doan tu\n", attemp); Sleep(1500); system("cls");	
+			attemp = 7; printf("\nBan co tong cong %d luot de doan tu\n", attemp); Sleep(1500); system("cls");	
 		}
 		else if(luaChon == 2){
-			attemp = 3; printf("\nBan co tong cong la %d luot de doan tu\n", attemp); Sleep(1500); system("cls");
+			attemp = 5; printf("\nBan co tong cong la %d luot de doan tu\n", attemp); Sleep(1500); system("cls");
 		}
 		else if(luaChon == 3){
-			attemp = 1; printf("\nBan chi co %d luot de doan tu!!!\n", attemp); Sleep(1500); system("cls");
+			attemp = 3; printf("\nBan chi co %d luot de doan tu!!!\n", attemp); Sleep(1500); system("cls");
 		}
 		else{
 			printf("\nChon cho dung che do di thang ml\n"); Sleep(1500); system("cls");
