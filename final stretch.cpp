@@ -8,7 +8,6 @@
 /*
 ok cong viec moi:
 tim va viet cai list hoc sinh
-tim cach "mem hoa" code
 sua vai loi nhu la doan het tu roi ma chua thang
 va neu nhap ma dung het thi cung thang
 */
@@ -32,8 +31,8 @@ void gioiThieu(){
 	gotoxy(25, 5);
 	FILE *ok = fopen("GioiThieu.txt", "rt");
 	if(ok == NULL){
-		printf("Khong mo duoc file !");
-		return;
+		printf("Loi ba no roi !");
+		exit(1);
 	}
 	char c;
 	while(!feof(ok)){
@@ -119,7 +118,8 @@ void game(){
 		int dem = 0;
 		FILE* open = fopen("BA.txt", "r");
 		if(!open){
-			printf("Loi roi");
+			printf("Loi roi!");
+			exit(1);
 		}
 		while (fgets(input, sizeof(input), open)) {
         	dem++; //dem co bao nhieu tu trong file
