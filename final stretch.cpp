@@ -179,7 +179,7 @@ void game(){
 				getchar(); system("cls");
 				return;	
 			}
-			else if(strlen(letter) > 1){
+			else if(strlen(letter) > 1 || letter[0] == ' ' || strlen(letter) == 0){
 				goto initial;
 			}else{
 				xuLi(input, box, letter[0]);
